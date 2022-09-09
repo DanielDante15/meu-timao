@@ -1,0 +1,16 @@
+
+
+.principal {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(130, 130, 130);
+    height:100vh;
+}
+
+.cards {
+
+    background-color: rgb(255, 0, 0);
+    height: 30vh;
+    width: 30vw;
+}
