@@ -1,4 +1,12 @@
 from django.shortcuts import render
 
+from .models import Produto
+
 def home_tela(request):
-    return render(request,'index.html')
+    produtos = Produto.objects.all()
+    
+    dados = {
+        'produtos':produtos
+    }
+
+    return render(request,'index.html',dados)

@@ -1,16 +1,81 @@
-
-
-.principal {
-    justify-content: center;
-    align-items: center;
+.principal1 {
     display: flex;
-    background-color: rgb(130, 130, 130);
-    height:100vh;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 3vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
 }
+.principal{
+    background-color: rgb(130, 130, 130);
+    display: block;
+}
+
 
 .cards {
-
-    background-color: rgb(255, 0, 0);
-    height: 30vh;
-    width: 30vw;
+    width: 20vw;
+    padding: 3vh 0vh 6vh 0vh ;
 }
+
+.teste{
+    box-sizing: border-box;
+    padding: 6rem;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(130, 130, 130);
+    transition-duration: 0.6s;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #555;
+    width: 10px;
+    transition-duration: 0.6s;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    width: 10px;
+    border-radius: 20px;
+    transition-duration: 0.6s;
+  }
+
+
+  .pagination {
+    padding: 1.5vh 1.5vh 1.5vh 1.5vh;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media(max-width: 390px) {
+    .cards {
+        width: 70vw;
+        padding: 3vh 0vh 6vh 0vh;
+    }
+ 
+
+  }
