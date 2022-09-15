@@ -29,6 +29,8 @@ class Produto(models.Model):
         (GEN_M,'Masculino'),
         (GEN_F,'Feminino')
         ]
+
+    fotoCapa = models.ImageField()
     nome = models.CharField(max_length=255, blank=True)
     descritivo = models.TextField()
     tamanho = models.CharField(max_length=2,choices=TAM_ROUPA)
