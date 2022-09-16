@@ -2,95 +2,105 @@
 
 {% block content %}
 <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-   
-    <figure  class="image is-64x64">
-      <a href=""><img src="{% static 'imgs\icon96.png' %}"></a>
-    </figure>
-    
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="false"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+    <div class="navbar-brand">
 
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-      <a class="navbar-item">
-        Nossa História
-      </a>
+        <figure class="image is-64x64">
+            <a href=""><img src="{% static 'imgs\icon96.png' %}"></a>
+        </figure>
 
-      <div class="navbar-item has-dropdown  is-hoverable">
-        <a class="navbar-link ">
-          Camisetas
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="false"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
         </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Masculino
-          </a>
-          <a class="navbar-item">
-            Feminino
-          </a>
-          <a class="navbar-item">
-            Infantil
-          </a>
-          
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown  is-hoverable">
-        <a class="navbar-link ">
-          Calças
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Masculino
-          </a>
-          <a class="navbar-item">
-            Feminino
-          </a>
-          <a class="navbar-item">
-            Infantil
-          </a>
-        </div>
-      </div>
-      <div class="navbar-item has-dropdown  is-hoverable">
-        <a class="navbar-link ">
-          Acessórios
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Bandeiras
-          </a>
-          <a class="navbar-item">
-            Máscaras
-          </a>
-          <a class="navbar-item">
-            Colecionaveis
-          </a>  
-        </div>
-      </div>
-      <a class="navbar-item">
-        Proximos Jogos
-      </a>
     </div>
-    
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Entrar</strong>
-          </a>
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item">
+                Home
+            </a>
+            <a class="navbar-item">
+                Nossa História
+            </a>
+
+            <div class="navbar-item has-dropdown  is-hoverable">
+                <a class="navbar-link ">
+                    Camisetas
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Masculino
+                    </a>
+                    <a class="navbar-item">
+                        Feminino
+                    </a>
+                    <a class="navbar-item">
+                        Infantil
+                    </a>
+
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown  is-hoverable">
+                <a class="navbar-link ">
+                    Calças
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Masculino
+                    </a>
+                    <a class="navbar-item">
+                        Feminino
+                    </a>
+                    <a class="navbar-item">
+                        Infantil
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item has-dropdown  is-hoverable">
+                <a class="navbar-link ">
+                    Acessórios
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Bandeiras
+                    </a>
+                    <a class="navbar-item">
+                        Máscaras
+                    </a>
+                    <a class="navbar-item">
+                        Colecionaveis
+                    </a>
+                </div>
+            </div>
+            <a class="navbar-item">
+                Proximos Jogos
+            </a>
         </div>
-      </div>
+
+
+        <div class="navbar-end">
+            {% if user.is_authenticated %}
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="{% url 'sair' %}" class="button is-primary">
+                        <strong>Sair</strong>
+                    </a>
+                </div>
+            </div>
+            {% else %}
+            <div class="navbar-item">
+                <div  class="buttons">
+                    <a href="{% url 'entrar' %}" class="button is-primary">
+                        <strong>Entrar</strong>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
     </div>
-  </div>
 </nav>
 {% endblock content %}

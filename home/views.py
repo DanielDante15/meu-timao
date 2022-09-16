@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 
 from .models import Produto
 
@@ -10,3 +10,11 @@ def home_tela(request):
     }
 
     return render(request,'index.html',dados)
+
+
+
+def entrar(request):
+    return HttpResponseRedirect('http://127.0.0.1:8000/admin/login/?next=/admin/')
+
+def sair(request):
+    return HttpResponseRedirect('http://127.0.0.1:8000/admin/logout')
